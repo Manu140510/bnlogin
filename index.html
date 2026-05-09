@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de login</title>
+
+    <style>
+
+      body{
+        display: flex;
+        justify-content: center; /* horizontal */
+        align-items: center;     /* vertical */
+        height: 100vh;
+        background-image: url(img.png); /* Imagem e abaixa pra alinhar a img*/
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .login{
+        background-color: rgba(93, 0, 155, 0.699);
+        padding: 20px;
+        width: 200px;
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+
+        border: 2px solid rgba(255, 255, 255, 0.541);
+
+        box-shadow:
+         0 0 15px rgb(255, 255, 255),
+         0 0 30px rgba(255, 255, 255, 0.5); /*Borda 3D brilhante*/
+
+        color: white;
+        
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+
+      }
+
+      .inputdois{
+        border-radius: 10px;
+        padding: 4px;
+        background-image: url(email.png);
+        background-repeat: no-repeat;
+        background-size: 20px;
+        background-position: 10px center;
+      }
+
+      .inputtres{
+        border-radius: 10px;
+        padding: 4px;
+        background-image: url(password.png);
+        background-repeat: no-repeat;
+        background-size: 20px;
+        background-position: 10px center;
+      }
+
+      ::placeholder{
+        color: black;
+        padding-left: 30px; 
+      }
+
+      button{
+        border-radius: 10px;
+        padding: 5px;
+      }
+
+      a{
+        color: white;
+      }
+
+      a:active{
+        color: rgb(0, 0, 0); /* muda a cor ao clicar*/
+      }
+
+    </style>
+
+</head>
+<body>
+    
+      <div class="login"> 
+          
+        <h2>Tela de Login</h2>
+
+        <p>
+        <label for="login" >Login</label>
+          <input class="inputdois" type="email" id="login" placeholder="Digite seu email"><br>
+        </p>
+
+        <p>
+        <label for="senha">Senha</label>
+          <input class="inputtres" type="password" id="senha" placeholder="Digite sua senha"><br>
+        </p>
+
+        <p>
+          <label>
+            <input type="checkbox">
+            Lembrar da senha
+          </label>
+        </p>
+
+        <p>
+          <button type="submit">Entrar</button>
+        </p>
+
+        <a href="#">Cadastrar</a>
+      </div> 
+</body>
+</html>
