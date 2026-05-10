@@ -40,6 +40,7 @@
       .inputdois{
         border-radius: 10px;
         padding: 4px;
+        padding-left: 35px;
         background-image: url(email.png);
         background-repeat: no-repeat;
         background-size: 20px;
@@ -49,6 +50,7 @@
       .inputtres{
         border-radius: 10px;
         padding: 4px;
+        padding-left: 35px;
         background-image: url(password.png);
         background-repeat: no-repeat;
         background-size: 20px;
@@ -57,7 +59,6 @@
 
       ::placeholder{
         color: black;
-        padding-left: 30px; 
       }
 
       button{
@@ -84,13 +85,13 @@
         <h2>Tela de Login</h2>
 
         <p>
-        <label for="login">Login</label>
-          <input class="inputdois" type="email" id="login" placeholder="Digite seu email"><br>
+        <label for="login">Login</label><br>
+          <input class="inputdois" type="email" id="login" placeholder="Digite seu email">
         </p>
 
         <p>
-        <label for="senha">Senha</label>
-          <input class="inputtres" type="password" id="senha" placeholder="Digite sua senha"><br>
+        <label for="senha">Senha</label><br>
+          <input class="inputtres" type="password" id="senha" placeholder="Digite sua senha">
         </p>
 
         <p>
@@ -101,28 +102,39 @@
         </p>
 
         <p>
-          <button type="button" onclick="entrar()">Entrar</button>
+          <button type="button" onclick="entrar()">
+            Entrar
+          </button>
         </p>
 
-        <a href="https://manu140510.github.io/bccadastro/">Cadastrar</a>
+        <a href="https://manu140510.github.io/bccadastro/">
+          Cadastrar
+        </a>
+
       </div> 
 
 <script>
+
+/* LOGIN */
 
 function entrar(){
 
     let email = document.getElementById("login").value;
     let senha = document.getElementById("senha").value;
 
-    // LOGIN TESTE
-    let emailCorreto = "admin@gmail.com";
-    let senhaCorreta = "1234";
+    /* PEGAR DADOS SALVOS */
 
-    if(email === emailCorreto && senha === senhaCorreta){
+    let emailSalvo = localStorage.getItem("email");
+    let senhaSalva = localStorage.getItem("senha");
+
+    /* VERIFICAR */
+
+    if(email === emailSalvo && senha === senhaSalva){
 
         alert("Login realizado com sucesso!");
 
-        // REDIRECIONAR
+        /* REDIRECIONAR */
+
         window.location.href = "https://manu140510.github.io/bnconta/";
 
     } else {
